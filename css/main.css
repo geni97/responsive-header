@@ -10,8 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
-  font: normal 100%/1.3 sans-serif;
-  font-family: "Ubuntu", sans-serif;
+  font: normal 100%/1.3 Ubuntu, sans-serif;
 }
 
 *, *::before, *::after {
@@ -24,25 +23,68 @@ body {
 
 header {
   background-color: #18294f;
+  color: #fff;
 }
 
-h1 {
+header h1 {
   text-align: center;
   color: #fff;
   margin: 0;
   padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   padding-left: 1em;
+  font-size: 1.125rem;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: #6c8fe0;
+  white-space: nowrap;
 }
 
 li {
   padding-bottom: 1em;
+}
+
+nav a:hover {
+  background-color: #6c8fe0;
+  color: #fff;
+  padding: 0.5em;
+  padding-right: 17em;
+}
+
+@media only screen and (min-width: 25em) {
+
+  html {
+    font-size: 100%;
+    line-height: 1.3;
+  }
+
+  li:nth-child(1), li:nth-child(3) {
+    float: left;
+    padding-right: 8em;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  li:nth-child(1), li:nth-child(3) {
+    float: none;
+    padding: 0;
+  }
+
 }
